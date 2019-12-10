@@ -1,0 +1,57 @@
+/*SIMA ANA-MARIA - 323CB*/
+
+	Am implementat 4 structuri de date:
+- struct lsc: contine lista de submultimi de carduri;
+- struct card: contine lista de carduri;
+- struct history: contine lista de history;
+- info_card: informatia unui card;
+
+	Functiile implementate sunt:
+- LH AlocCelulaHistory(char*, char*);
+- LSC AlocCelulaCard(char*, char*, char*, char*);
+- LC AlocCelulaLSC(char*, char*, char*, char*);
+- int InsHistory(LH*, char*, char*);
+- int InsCard(LSC*, char*, char*, char*, char*);
+- int InsIncLSC(LC*, char*, char*, char*, char*);
+- int CalcPos(int, char*);
+- void AfisareHistory(FILE*, LH);
+- void AfisareLC(FILE*, LC, int);
+- int ExistaCard(LSC, char*);
+- int ExistaPozitie(LC, int);
+- int EliminaHistory(ALH, char*);
+- int EliminaCard(ALSC, char*);
+- void DeblocareCard(LSC*, char*);
+- LH Copie(LH);
+- LC RedLC(LC, int);
+- int Depunere(LSC*, int);
+- int Retragere(LSC*, int);
+
+	Functiile AlocCelulaHistory, AlocCelulaCard, AlocCelulaLSC aloca liste de tip history, LSC si respectiv LC.
+	Functiile InsHistory, InsCard, InsIncLSC insereaza elemente la inceput de lista.
+	Functia CalcPos returneaza pozitia corespunzatoare unui card.
+	Functiile AfisareHistory si AfisareLC se ocupa cu afisarea elementelor din lista.
+	Functia ExistaCard verifica daca un anumit card(caracterizat prin card_number) exista deja in baza de date. Iar functia ExistaPozitie verifica daca am suficiente celule de tip lsc.
+	Functiile EliminaHistory si EliminaCard sterg o celula de tip history/card dintr-o lista.
+	Functia DeblocareCard aplica operatia de deblocare asupra unui anumit card.
+	Functia Copie se aplica listei de history si copiaza o anumita celula dintr-o lista.
+	Functia RedLC creeaza o noua baza de date unde cardurile vor fi introduse conform noii reguli.
+	Functia Depunere adauga, daca se poate, o suma sum pe un card.
+	Functia Retragere ia, daca se poate, o suma sum de pe un card.
+	
+
+
+	main:
+	Am implementat urmatoarele functionalitati:
+
+- add_card;
+- delete_card;
+- unblock_card;
+- reverse_transaction;
+- show;
+- insert_card;
+- recharge;
+- cash_withdrawal;
+- balance_inquiry;
+- transfer_funds;
+- pin_change;
+- cancel;
